@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:800|PT+Mono|PT+Sans&subset=cyrillic");
+/* variables */
+/*Color system*/
+/*! minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
+
+button,
+input,
+select,
+textarea {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+img,
+embed,
+iframe,
+object,
+video {
+  height: auto;
+  max-width: 100%; }
+
+audio {
+  max-width: 100%; }
+
+iframe {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0;
+  text-align: left; }
+
+html {
+  background-color: #FFF;
+  font-size: 16px;
+  overflow-x: hidden;
+  text-size-adjust: 100%;
+  overflow-y: scroll; }
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block; }
+
+h1,
+h2,
+header,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; }
+
+a {
+  color: #0059D9;
+  cursor: pointer;
+  text-decoration: none; }
+  a strong {
+    color: currentColor; }
+  a:hover {
+    color: #000000; }
+  a:active, a:focus {
+    opacity: .7; }
+
+input,
+select,
+textarea {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem; }
+
+body {
+  font-family: "PT Mono", sans-serif;
+  color: #000000;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.25rem; }
+
+img {
+  height: auto;
+  max-width: 100%; }
+
+/* Only comments */
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.75rem; }
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+      line-height: 2.25rem; } }
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.25rem; }
+
+header,
+button {
+  font-size: 1.125rem;
+  line-height: 1.5rem; }
+
+/* Only comments */
+/* footer */
+/* Only comments */
+.btn {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: #0059D9;
+  background: #FFF;
+  border: 1px solid rgba(31, 64, 111, 0.2);
+  border-radius: 4px; }
+  .btn:active, .btn:focus {
+    outline: none;
+    opacity: .7; }
+  .btn-primary {
+    background: #0059D9;
+    color: #FFF;
+    border: none; }
+
+/* Only comments */
+/* Only comments */
+.carousel__text {
+  font-family: "PT Sans", sans-serif; }

@@ -1,0 +1,8 @@
+@function weight($key) {
+    @if map-has-key($weight, $key) {
+        @return map-get($weight, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $weight .";
+    @return null;
+}

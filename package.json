@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "autoprefixer": "*",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-load-plugins": "*",
+    "gulp-postcss": "*",
+    "gulp-replace": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-stylelint": "*",
+    "stylelint": "*",
+    "stylelint-scss": "^3.5.1",
+    "stylelint-config-recommended-scss": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/golovastyartur/task1.git"
+  },
+  "author": "Artur Golovasty",
+  "license": "ISC"
+}

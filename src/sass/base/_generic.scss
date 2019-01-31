@@ -1,0 +1,63 @@
+html {
+  background-color: $body-background-color;
+  font-size: $body-size;
+  overflow-x: hidden;
+  text-size-adjust: 100%;
+  overflow-y: scroll;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+h1,
+h2,
+header,
+button{
+  font-family: $header-family;
+  font-weight: $weight-bold;  //на случай недоступности google fonts
+}
+
+a{
+  color: $link;
+  cursor: pointer;
+  text-decoration: none;
+  strong{
+    color: currentColor;
+  }
+  &:hover{
+    color: $link-hover;
+  }
+  &:active,
+  &:focus{
+    opacity: .7;
+  }
+}
+
+input,
+select,
+textarea{
+  font-family: $form-family;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+body
+{
+  font-family: $body-family;
+  color: $body-color;
+  font-size: .875rem;
+  font-weight: $body-weight; //на случай недоступности google fonts
+  line-height: $body-line-height;
+}
+
+img{
+  height: auto;
+  max-width: 100%;
+}
