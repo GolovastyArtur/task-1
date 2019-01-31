@@ -2,11 +2,15 @@
 .btn{
   @extend %control;
   @extend %form_item;
+  min-width: $button-width;
+  background: $white;
 
   outline: none;
-  background: $white;
+  text-align: center;
+  white-space: nowrap;
   border: 1px solid rgba($border, .2);
   border-radius: 4px;
+  padding: $button-padding;
 }
 
 // на случай, если появятся новые кнопки или цвет ссылок начнёт отличаться от кнопки
