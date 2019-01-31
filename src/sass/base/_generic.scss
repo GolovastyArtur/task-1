@@ -18,34 +18,30 @@ section {
 
 h1,
 h2,
-header,
-button{
+header{
   font-family: $header-family;
   font-weight: $weight-bold;  //на случай недоступности google fonts
 }
 
 a{
-  color: $link;
-  cursor: pointer;
+  // к сожалению мы не можем использовать тут наследование от плейсхолдер
+  // так как они поднимаются вверх
+  // это может привести к нежелательным последствиям
+  // но во всех классах будет использоваться наследование
+  @include control;
   text-decoration: none;
   strong{
     color: currentColor;
   }
-  &:hover{
-    color: $link-hover;
-  }
-  &:active,
-  &:focus{
-    opacity: .7;
-  }
+
 }
 
 input,
 select,
-textarea{
-  font-family: $form-family;
-  font-size: 1rem;
-  line-height: 1.25rem;
+textarea,
+button{
+  // аналогичная ситуация
+  @include form_item;
 }
 
 body

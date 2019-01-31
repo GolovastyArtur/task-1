@@ -1,24 +1,13 @@
 /* Only comments */
 .btn{
-  cursor: pointer;
-  font-family: $header-family;
-  font-weight: $weight-bold;  //на случай недоступности google fonts
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  color: $link;
+  @extend %control;
+  @extend %form_item;
+
+  outline: none;
   background: $white;
   border: 1px solid rgba($border, .2);
   border-radius: 4px;
-  &:active,
-  &:focus{
-    outline: none;
-    opacity: .7;
-  }
-
-  // на случай, если появятся новые кнопки или цвет ссылок начнёт отличаться от кнопки
-  &-primary{
-    background: $primary;
-    color: $white;
-    border: none;
-  }
 }
+
+// на случай, если появятся новые кнопки или цвет ссылок начнёт отличаться от кнопки
+@include button('primary', $primary)

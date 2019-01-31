@@ -1,6 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:800|PT+Mono|PT+Sans&subset=cyrillic");
 /* variables */
 /*Color system*/
+.btn, .btn-primary {
+  color: #0059D9;
+  cursor: pointer;
+  transition: all .5s; }
+  .btn:hover, .btn-primary:hover {
+    color: #000000; }
+  .btn:active, .btn-primary:active, .btn:focus, .btn-primary:focus {
+    color: #0059D9;
+    opacity: .7; }
+
+.btn, .btn-primary {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem; }
+
 /*! minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -95,25 +110,27 @@ section {
 
 h1,
 h2,
-header,
-button {
+header {
   font-family: "Montserrat", sans-serif;
   font-weight: 700; }
 
 a {
   color: #0059D9;
   cursor: pointer;
+  transition: all .5s;
   text-decoration: none; }
-  a strong {
-    color: currentColor; }
   a:hover {
     color: #000000; }
   a:active, a:focus {
+    color: #0059D9;
     opacity: .7; }
+  a strong {
+    color: currentColor; }
 
 input,
 select,
-textarea {
+textarea,
+button {
   font-family: "PT Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.25rem; }
@@ -142,31 +159,33 @@ h2 {
   font-size: 2rem;
   line-height: 2.25rem; }
 
-header,
-button {
+header {
   font-size: 1.125rem;
   line-height: 1.5rem; }
 
 /* Only comments */
 /* footer */
 /* Only comments */
-.btn {
-  cursor: pointer;
+.btn, .btn-primary {
+  outline: none;
+  background: #FFF;
+  border: 1px solid rgba(31, 64, 111, 0.2);
+  border-radius: 4px; }
+
+.btn-primary {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.5rem;
-  color: #0059D9;
-  background: #FFF;
-  border: 1px solid rgba(31, 64, 111, 0.2);
-  border-radius: 4px; }
-  .btn:active, .btn:focus {
-    outline: none;
-    opacity: .7; }
-  .btn-primary {
-    background: #0059D9;
+  border: none;
+  background-color: #0059D9;
+  color: #FFF; }
+  .btn-primary:hover {
     color: #FFF;
-    border: none; }
+    background: #000000; }
+  .btn-primary:active, .btn-primary:focus {
+    color: #FFF;
+    background: #0059D9; }
 
 /* Only comments */
 /* Only comments */
