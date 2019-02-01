@@ -1,6 +1,6 @@
 html {
   background-color: $body-background-color;
-  font-size: $body-size;
+  font-size: $main-size;
   overflow-x: hidden;
   text-size-adjust: 100%;
   overflow-y: scroll;
@@ -48,7 +48,7 @@ body
 {
   font-family: $body-family;
   color: $body-color;
-  font-size: .875rem;
+  font-size: $body-size;
   font-weight: $body-weight; //на случай недоступности google fonts
   line-height: $body-line-height;
 }
@@ -56,4 +56,14 @@ body
 img{
   height: auto;
   max-width: 100%;
+}
+
+p{
+  margin-bottom: $main-margin;
+}
+
+input{
+  &[type=file]{
+    display: none;
+  }
 }

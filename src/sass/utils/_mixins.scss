@@ -28,6 +28,32 @@
   @include form_item;
 }
 
+@mixin input{
+  outline: none;
+  background: $white;
+  border: 1px solid rgba($border, .2);
+  border-radius: 4px;
+  padding: $main-padding;
+  max-width: 100%;
+  width: 100%;
+  transition: all .5s;
+  &::placeholder{
+    color: $black;
+    opacity: .3;
+  }
+  &:focus,
+  &:active{
+    border-color: $link;
+  }
+  //&:invalid:not(:placeholder-shown) {
+  //  border-color: $red;
+  //}
+}
+
+%input{
+  @include input;
+}
+
 @mixin button($name, $color-button) {
   .btn-#{$name} {
     @extend .btn;
@@ -35,7 +61,7 @@
     font-weight: $weight-bold;  //на случай недоступности google fonts
     font-size: 1.125rem;
     line-height: 1.5rem;
-    padding: $button-padding * 2;
+    padding: $main-padding * 2;
     border: none;
     background-color: $color-button;
     color: $white;

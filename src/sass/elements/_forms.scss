@@ -1,8 +1,14 @@
 /* Only comments */
+.field{
+  margin-bottom: $main-margin;
+}
 
 .input{
-  outline: none;
-  background: rgba(255,255,255,0.00);
-  border: 1px solid rgba(31,64,111,0.20);
-  border-radius: 4px;
+  @extend %input;
 }
+
+.textaria{
+  @extend %input;
+  resize: none;
+}
+
