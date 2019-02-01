@@ -9,10 +9,13 @@
 @import 'base/generic';
 @import 'base/typography';
 
+@import 'layout/section';
 @import 'layout/header';
 @import 'layout/footer';
 
-@import 'elements/buttons';
-@import 'elements/forms';
+
+@import 'elements/button';
+@import 'elements/form';
+@import 'elements/container';
 
 @import 'components/carousel';

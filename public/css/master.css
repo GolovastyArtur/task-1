@@ -187,11 +187,24 @@ header {
   font-size: 1.125rem;
   line-height: 1.5rem; }
 
+/* Sections */
+@media screen and (min-width: 320px) {
+  .section {
+    padding: 20px; } }
+
+@media screen and (min-width: 600px) {
+  .section {
+    padding: 20px 40px; } }
+
+@media screen and (min-width: 1000px) {
+  .section {
+    padding: 20px; } }
+
 /* Only comments */
 /* footer */
-/* Only comments */
+/* Buttons */
 .btn, .btn-primary {
-  min-width: 295px;
+  min-width: 280px;
   background: #FFF;
   outline: none;
   text-align: center;
@@ -222,6 +235,16 @@ header {
 
 .textaria {
   resize: none; }
+
+/* Container */
+.container {
+  width: auto;
+  margin: 0 auto;
+  padding: 0;
+  position: relative; }
+  @media screen and (min-width: 1000px) {
+    .container {
+      max-width: 700px; } }
 
 /* Only comments */
 .carousel__text {

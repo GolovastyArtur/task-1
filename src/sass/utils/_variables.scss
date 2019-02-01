@@ -36,4 +36,12 @@ $main-padding: $body-size / 2;
 $main-margin: 1.25rem;
 $form-family: $family-secondary;
 $header-family: $family-extra;
-$button-width: 295px;
+$button-width: 280px;
+
+$gap: 20px;
+$media-size: (
+        'mobile': 320px,
+        'tablet': 600px,
+        'desktop': 1000px,
+);
+$content-size: 700px;

@@ -1,0 +1,14 @@
+/* Sections */
+.section{
+
+  @include mobile{
+    padding: $gap;
+  }
+  @include tablet{
+    padding: $gap ($gap * 2);
+  }
+
+  @include desktop{
+    padding: $gap;
+  }
+}

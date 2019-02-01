@@ -77,3 +77,21 @@
     }
   }
 }
+
+@mixin desktop{
+  @media screen and (min-width: weight('desktop')){
+    @content
+  }
+}
+
+@mixin tablet{
+  @media screen and (min-width: weight('tablet')){
+    @content
+  }
+}
+
+@mixin mobile{
+  @media screen and (min-width: weight('mobile')){
+    @content
+  }
+}

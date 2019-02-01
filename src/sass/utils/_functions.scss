@@ -1,6 +1,6 @@
 @function weight($key) {
-    @if map-has-key($weight, $key) {
-        @return map-get($weight, $key);
+    @if map-has-key($media-size, $key) {
+        @return map-get($media-size, $key);
     }
 
     @warn "Unknown `#{$key}` in $weight .";
