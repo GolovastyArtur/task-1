@@ -1,1 +1,21 @@
-/* Only comments */
+/* Header */
+
+.header{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: $gray-1;
+
+  &__image{
+
+    img{
+      width: 340px;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+}
