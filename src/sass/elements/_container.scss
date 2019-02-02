@@ -1,15 +1,10 @@
 /* Container */
 .container{
+  display: block;
   width: auto;
   margin: 0 auto;
   padding: 0;
   position: relative;
-  //@include mobile{
-  //
-  //}
-  //@include tablet{
-  //
-  //}
   @include desktop{
     max-width: $content-size;
   }

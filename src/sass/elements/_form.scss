@@ -1,6 +1,25 @@
 /* Only comments */
+
+.form{
+  padding-top: $gap;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gap/2;
+  margin-right: -$gap/2;
+
+  // плохо, что привязанно к форме. Возмоно, стоило вынести в отдельный класс .btn-col
+  .btn{
+    width: 100%;
+  }
+}
+
 .field{
-  margin-bottom: $main-margin;
+  flex: 1 100%;
+  padding: 0 $gap/2;
+
+  &-6{
+    flex: 1 50%;
+  }
 }
 
 .input{
@@ -10,5 +29,7 @@
 .textaria{
   @extend %input;
   resize: none;
+  vertical-align: top;
+  min-height: 136px;
 }
 

@@ -59,8 +59,9 @@ img{
   max-width: 100%;
 }
 
-p{
-  margin-bottom: $main-margin;
+p,
+label{
+  margin-bottom: $gap;
 }
 
 input{
