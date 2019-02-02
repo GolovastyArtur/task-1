@@ -57,7 +57,6 @@
 
 @mixin button($name, $color-button) {
   .btn-#{$name} {
-    @extend .btn;
     font-family: $header-family;
     font-weight: $weight-bold;  //на случай недоступности google fonts
     font-size: 1.125rem;
@@ -94,5 +93,29 @@
 @mixin mobile{
   @media screen and (min-width: weight('mobile')){
     @content
+  }
+}
+
+
+@mixin social($name, $background, $font-size) {
+  .social-#{$name} {
+    @extend %control;
+    font-size: $font-size;
+    background-color: $background;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    color: $white;
+
+    &:hover{
+      color: $white;
+      background-color: mix($black, $background, 20%);
+    }
+    &:active,
+    &:focus{
+      background: $background;
+      color: $white;
+    }
   }
 }

@@ -3,7 +3,7 @@
   @extend %control;
   @extend %form_item;
   min-width: $button-width;
-  background: $white;
+  background: transparent;
 
   outline: none;
   text-align: center;
