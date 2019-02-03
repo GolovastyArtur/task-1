@@ -1,9 +1,17 @@
+@mixin transition{
+  transition: all .5s ease-in-out;
+}
+
+%transition{
+  @include transition;
+}
+
 @mixin control{
   color: $link;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
-  transition: all .5s;
+  @extend %transition;
   &:hover{
     color: $link-hover;
   }
@@ -37,7 +45,7 @@
   margin-bottom: $gap;
   max-width: 100%;
   width: 100%;
-  transition: all .5s;
+  @extend %transition;
   &::placeholder{
     color: $black;
     opacity: .3;

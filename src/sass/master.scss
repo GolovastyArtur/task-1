@@ -9,12 +9,6 @@
 @import 'base/generic';
 @import 'base/typography';
 
-@import 'layout/section';
-@import 'layout/header';
-@import 'layout/contact';
-@import 'layout/footer';
-
-
 @import 'elements/button';
 @import 'elements/form';
 @import 'elements/container';
@@ -22,3 +16,8 @@
 
 @import 'components/carousel';
 @import 'components/accordion';
+
+@import 'layout/section';
+@import 'layout/header';
+@import 'layout/contact';
+@import 'layout/footer';

@@ -9,13 +9,16 @@
   background-color: $gray-1;
 
   &__image{
-
     img{
       width: 340px;
       height: 340px;
       object-fit: cover;
       border-radius: 50%;
     }
+  }
+
+  &__text{
+    padding-top: 36px;
   }
 
 }
