@@ -14,4 +14,4 @@
 }
 
 // на случай, если появятся новые кнопки или цвет ссылок начнёт отличаться от кнопки
-@include button('primary', $primary)
+@include button('primary', $primary);
