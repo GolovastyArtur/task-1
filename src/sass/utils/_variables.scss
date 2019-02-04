@@ -10,52 +10,41 @@ $gray-1: #EFF1F2;
 $gray-2: #C5CDD7;
 $gray-3: #25282A;
 $black: #000000;
+$blue-0: #71ABFF;
 $blue-1: #0059D9;
 $blue-2: #1F406F;
 $blue-3: #395A99;
 $blue-4: #51ADEF;
 $blue-5: #2CA5E0;
 $blue-6: #0077B5;
-$lightblue: #71ABFF;
-$red: #FF0000;
 
+$red: #FF0000;
 
 $text: $black;
 $link: $blue-1;
 $link-hover: $black;
+$dark-link: $blue-0;
+$dark-link-hover: $white;
 $primary: $blue-1;
 $border: $blue-2;
 $error: $red;
+$light: $gray-1;
+$dark: $gray-3;
 
-// social
-$facebook: $blue-3;
-$facebook-size: 24.3px;
-$twitter: $blue-4;
-$twitter-size: 21.7px;
-$telegram: $blue-5;
-$telegram-size: 23.1px;
-$linkedin: $blue-6;
-$linkedin-size: 23.1px;
-
-
-$main-size: 16px;
-$body-background-color: $white;
-$body-size: .875rem;
-$body-family: $family-primary;
-$body-color: $text;
-$body-weight: $weight-normal;
-$body-line-height: 1.25rem;
-$main-padding: $body-size / 2;
 $form-family: $family-secondary;
 $header-family: $family-extra;
+
+$body-size: .875rem;
+$main-padding: $body-size / 2;
+$gap: 20px;
 $min-width: 280px;
 $button-width: $min-width;
 $accordion-width: $min-width;
-
-$gap: 20px;
+$content-size: 700px;
 $media-size: (
         'mobile': 320px,
         'tablet': 600px,
         'desktop': 1000px,
 );
-$content-size: 700px;
+
+$opacity: .7;

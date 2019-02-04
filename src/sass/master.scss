@@ -8,6 +8,7 @@
 @import 'base/minireset';
 @import 'base/generic';
 @import 'base/typography';
+@import 'base/helpers';
 
 @import 'elements/button';
 @import 'elements/form';
@@ -19,5 +20,5 @@
 
 @import 'layout/section';
 @import 'layout/header';
+@import 'layout/work';
 @import 'layout/contact';
-@import 'layout/footer';

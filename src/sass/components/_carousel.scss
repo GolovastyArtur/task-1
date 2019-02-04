@@ -1,7 +1,95 @@
 /* Carousel */
+$accordion-i-width: 16px;
+$items: 4;
 
 .carousel{
-  &__text{
-    font-family: $family-secondary;
+  padding-top: 80px;
+  position: relative;
+
+  &__header{
+    text-align: center;
   }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    @extend %transition;
+    img{
+      position: absolute;
+      opacity: 0;
+      box-shadow: 0 2px 4px 0 rgba($black, .08), 0 7px 22px 0 rgba($black, .12);
+      border-radius: 8px;
+    }
+  }
+
+  &__controller:checked + .carousel__item img{
+    position: static;
+    opacity: 1;
+  }
+
+  &__indicators {
+    display: flex;
+    // отстутп от изоброжения на макете 28px.
+    // высота bullet = 8px. Значит отступ от li 4px и того 24px растояния от изображения
+    // это 4 пикселя нехватаюшего смещения
+    padding-top: 4px;
+
+    li {
+      display: inline-block;
+
+    }
+  }
+
+  &__bullet {
+    cursor: pointer;
+    width: $accordion-i-width;
+    height: $accordion-i-width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before{
+      content: "";
+      background-color: $dark-link;
+      @extend %transition;
+      border-radius: 50%;
+      border: 1px solid $dark-link;
+      width: $accordion-i-width/2;
+      height: $accordion-i-width/2;
+    }
+
+    &:hover {
+      &:before{
+        background-color: $dark-link-hover;
+        border-color: $dark-link-hover;
+      }
+    }
+
+    &:focus,
+    &:active{
+      &:before{
+        background-color: $dark-link;
+        border-color: $dark-link;
+        opacity: $opacity;
+      }
+    }
+  }
+
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    padding-top: $gap;
+  }
+
+  &__text{
+    max-width: 520px;
+    font-family: $family-secondary;
+    flex: 1;
+  }
+}
+
+@for $i from 1 through $items {
+  @include slide($i);
 }

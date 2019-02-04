@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:800|PT+Mono|PT+Sans&subset=cyrillic");
-.btn, .social-facebook, .social-twitter, .social-telegram, .social-linkedin, .input, .textaria, a, .accordion header,
+.btn, .social-facebook, .social-twitter, .social-telegram, .social-linkedin, .input, .textaria, a, .carousel__item, .carousel__bullet:before, .accordion header,
 .accordion p,
 .accordion i, .accordion li i:before, .accordion li i:after {
   transition: all .5s ease-in-out; }
@@ -13,7 +13,7 @@
     color: #000000; }
   .btn:active, .social-facebook:active, .social-twitter:active, .social-telegram:active, .social-linkedin:active, .btn:focus, .social-facebook:focus, .social-twitter:focus, .social-telegram:focus, .social-linkedin:focus {
     color: #0059D9;
-    opacity: .7; }
+    opacity: 0.7; }
 
 .btn {
   font-family: "PT Sans", sans-serif;
@@ -130,9 +130,12 @@ section {
 h1,
 h2,
 header {
-  margin-bottom: .5rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700; }
+
+h1,
+h2 {
+  margin-bottom: .5rem; }
 
 a {
   color: #0059D9;
@@ -144,7 +147,7 @@ a {
     color: #000000; }
   a:active, a:focus {
     color: #0059D9;
-    opacity: .7; }
+    opacity: 0.7; }
   a strong {
     color: currentColor; }
 
@@ -191,6 +194,21 @@ h2 {
 header {
   font-size: 1.125rem;
   line-height: 1.5rem; }
+
+.is-opacity {
+  opacity: 0.7; }
+
+.is-dark {
+  background-color: #25282A; }
+  .is-dark a {
+    color: #71ABFF; }
+    .is-dark a:hover {
+      color: #FFF; }
+    .is-dark a:active, .is-dark a:focus {
+      color: #71ABFF; }
+
+.is-light {
+  background-color: #EFF1F2; }
 
 /* Buttons */
 .btn {
@@ -321,8 +339,69 @@ header {
     color: #FFF; }
 
 /* Carousel */
-.carousel__text {
-  font-family: "PT Sans", sans-serif; }
+.carousel {
+  padding-top: 80px;
+  position: relative; }
+  .carousel__header {
+    text-align: center; }
+  .carousel__item {
+    position: relative;
+    overflow: hidden;
+    width: 100%; }
+    .carousel__item img {
+      position: absolute;
+      opacity: 0;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 7px 22px 0 rgba(0, 0, 0, 0.12);
+      border-radius: 8px; }
+  .carousel__controller:checked + .carousel__item img {
+    position: static;
+    opacity: 1; }
+  .carousel__indicators {
+    display: flex;
+    padding-top: 4px; }
+    .carousel__indicators li {
+      display: inline-block; }
+  .carousel__bullet {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .carousel__bullet:before {
+      content: "";
+      background-color: #71ABFF;
+      border-radius: 50%;
+      border: 1px solid #71ABFF;
+      width: 8px;
+      height: 8px; }
+    .carousel__bullet:hover:before {
+      background-color: #FFF;
+      border-color: #FFF; }
+    .carousel__bullet:focus:before, .carousel__bullet:active:before {
+      background-color: #71ABFF;
+      border-color: #71ABFF;
+      opacity: 0.7; }
+  .carousel__info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px; }
+  .carousel__text {
+    max-width: 520px;
+    font-family: "PT Sans", sans-serif;
+    flex: 1; }
+
+input[data-name=carousel-1]:checked ~ .carousel__info li:nth-child(1) .carousel__bullet:before {
+  background-color: transparent; }
+
+input[data-name=carousel-2]:checked ~ .carousel__info li:nth-child(2) .carousel__bullet:before {
+  background-color: transparent; }
+
+input[data-name=carousel-3]:checked ~ .carousel__info li:nth-child(3) .carousel__bullet:before {
+  background-color: transparent; }
+
+input[data-name=carousel-4]:checked ~ .carousel__info li:nth-child(4) .carousel__bullet:before {
+  background-color: transparent; }
 
 /* Accordion */
 .accordion {
@@ -336,7 +415,6 @@ header {
     overflow: hidden;
     max-width: 520px;
     max-height: 800px;
-    opacity: 1;
     transform: translate(0, 0);
     z-index: 2; }
   .accordion li {
@@ -409,8 +487,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  background-color: #EFF1F2; }
+  text-align: center; }
   .header__image img {
     width: 340px;
     height: 340px;
@@ -419,9 +496,14 @@ header {
   .header__text {
     padding-top: 36px; }
 
+/* Work */
+.work {
+  color: #FFF; }
+  .work__header {
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto; }
+
 /* Contact */
 .contact {
-  background-color: #EFF1F2;
   text-align: center; }
-
-/* Footer */

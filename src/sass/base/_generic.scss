@@ -1,3 +1,10 @@
+$main-size: 16px;
+$body-background-color: $white;
+$body-family: $family-primary;
+$body-color: $text;
+$body-weight: $weight-normal;
+$body-line-height: 1.25rem;
+
 html {
   background-color: $body-background-color;
   font-size: $main-size;
@@ -19,9 +26,13 @@ section {
 h1,
 h2,
 header{
-  margin-bottom: .5rem ;
   font-family: $header-family;
   font-weight: $weight-bold;  //на случай недоступности google fonts
+}
+
+h1,
+h2{
+  margin-bottom: .5rem;
 }
 
 a{

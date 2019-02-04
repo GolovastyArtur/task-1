@@ -6,19 +6,19 @@
   @include transition;
 }
 
-@mixin control{
-  color: $link;
+@mixin control($color: $link, $hover-color: $link-hover){
+  color: $color;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
   @extend %transition;
   &:hover{
-    color: $link-hover;
+    color: $hover-color;
   }
   &:active,
   &:focus{
-    color: $link;
-    opacity: .7;
+    color: $color;
+    opacity: $opacity;
   }
 }
 
@@ -125,5 +125,11 @@
       background: $background;
       color: $white;
     }
+  }
+}
+
+@mixin slide($id){
+  input[data-name=carousel-#{$id}]:checked ~ .carousel__info li:nth-child(#{$id}) .carousel__bullet:before{
+    background-color: transparent;
   }
 }

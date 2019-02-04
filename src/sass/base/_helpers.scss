@@ -1,0 +1,22 @@
+.is-opacity{
+  opacity: $opacity;
+}
+
+.is-dark{
+  background-color: $dark;
+
+  a{
+    color: $dark-link;
+    &:hover{
+      color: $dark-link-hover;
+    }
+    &:active,
+    &:focus{
+      color: $dark-link;
+    }
+  }
+}
+
+.is-light{
+  background-color: $light;
+}
