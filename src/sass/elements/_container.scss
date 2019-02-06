@@ -1,11 +1,11 @@
 /* Container */
 .container{
   display: block;
-  width: auto;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
   position: relative;
-  @include desktop{
+  @include mobile{
     max-width: $content-size;
   }
 }

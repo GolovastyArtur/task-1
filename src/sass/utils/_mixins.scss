@@ -133,3 +133,12 @@
     background-color: transparent;
   }
 }
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin image($size) {
+  @include size($size, $size);
+}

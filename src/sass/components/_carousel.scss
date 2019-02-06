@@ -3,11 +3,23 @@ $accordion-i-width: 16px;
 $items: 4;
 
 .carousel{
-  padding-top: 80px;
+  padding-top: 60px;
   position: relative;
+
+  @include desktop{
+    padding-top: 80px;
+  }
 
   &__header{
     text-align: center;
+
+    p{
+      margin-bottom: 16px;
+
+      @include desktop{
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &__item {
@@ -19,8 +31,12 @@ $items: 4;
     img{
       position: absolute;
       opacity: 0;
-      box-shadow: 0 2px 4px 0 rgba($black, .08), 0 7px 22px 0 rgba($black, .12);
-      border-radius: 8px;
+      box-shadow: 0 4px 0px 24px rgba($black, .02);
+      border-radius: 4px;
+
+      @include desktop{
+        border-radius: 8px;
+      }
     }
   }
 
@@ -34,7 +50,11 @@ $items: 4;
     // отстутп от изоброжения на макете 28px.
     // высота bullet = 8px. Значит отступ от li 4px и того 24px растояния от изображения
     // это 4 пикселя нехватаюшего смещения
-    padding-top: 4px;
+    padding: 12px 0;
+
+    @include desktop{
+      padding: 4px 0 0;
+    }
 
     li {
       display: inline-block;
@@ -79,14 +99,29 @@ $items: 4;
 
   &__info{
     display: flex;
-    justify-content: space-between;
-    padding-top: $gap;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    @include desktop{
+      padding-top: $gap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    p,
+    label{
+      margin: 0;
+    }
   }
 
   &__text{
-    max-width: 520px;
     font-family: $family-secondary;
     flex: 1;
+
+    @include desktop{
+      max-width: 520px;
+    }
   }
 }
 

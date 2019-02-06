@@ -1,11 +1,15 @@
 /* Form */
 
 .form{
-  padding-top: $gap;
+
   display: flex;
   flex-wrap: wrap;
   margin-left: -$gap/2;
   margin-right: -$gap/2;
+
+  @include desktop{
+    padding-top: $gap;
+  }
 
   // плохо, что привязанно к форме. Возмоно, стоило вынести в отдельный класс .btn-col
   .btn{
@@ -18,7 +22,10 @@
   padding: 0 $gap/2;
 
   &-6{
-    flex: 1 50%;
+
+    @include desktop{
+      flex: 1 50%;
+    }
   }
 }
 

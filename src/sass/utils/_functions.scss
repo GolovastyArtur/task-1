@@ -6,3 +6,11 @@
     @warn "Unknown `#{$key}` in $weight .";
     @return null;
 }
+@function image-width($key) {
+    @if map-has-key($image-size, $key) {
+        @return map-get($image-size, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $weight .";
+    @return null;
+}

@@ -1,18 +1,17 @@
 /* Sections */
 .section{
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 0 $gap/2;
 
-  @include mobile{
-    padding-left: $gap;
-    padding-right: $gap;
-  }
+  //@include mobile{
+  //  padding-left: $gap;
+  //  padding-right: $gap;
+  //}
   @include tablet{
-    padding-left: ($gap * 2);
-    padding-right: ($gap * 2);
+    padding: 52px $gap*2;
   }
 
   @include desktop{
+    padding: 100px $gap/2;
     padding-left: $gap;
     padding-right: $gap;
   }

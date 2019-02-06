@@ -180,12 +180,12 @@ input[type=file] {
 
 /* Typography */
 h1 {
-  font-size: 2.5rem;
-  line-height: 2.75rem; }
-  @media (max-width: 600px) {
+  font-size: 2rem;
+  line-height: 2.25rem; }
+  @media screen and (min-width: 1000px) {
     h1 {
-      font-size: 2rem;
-      line-height: 2.25rem; } }
+      font-size: 2.5rem;
+      line-height: 2.75rem; } }
 
 h2 {
   font-size: 2rem;
@@ -239,19 +239,22 @@ header {
 
 /* Form */
 .form {
-  padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px; }
+  @media screen and (min-width: 1000px) {
+    .form {
+      padding-top: 20px; } }
   .form .btn {
     width: 100%; }
 
 .field {
   flex: 1 100%;
   padding: 0 10px; }
-  .field-6 {
-    flex: 1 50%; }
+  @media screen and (min-width: 1000px) {
+    .field-6 {
+      flex: 1 50%; } }
 
 .textaria {
   resize: none;
@@ -261,11 +264,11 @@ header {
 /* Container */
 .container {
   display: block;
-  width: auto;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
   position: relative; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 320px) {
     .container {
       max-width: 700px; } }
 
@@ -340,10 +343,18 @@ header {
 
 /* Carousel */
 .carousel {
-  padding-top: 80px;
+  padding-top: 60px;
   position: relative; }
+  @media screen and (min-width: 1000px) {
+    .carousel {
+      padding-top: 80px; } }
   .carousel__header {
     text-align: center; }
+    .carousel__header p {
+      margin-bottom: 16px; }
+      @media screen and (min-width: 1000px) {
+        .carousel__header p {
+          margin-bottom: 20px; } }
   .carousel__item {
     position: relative;
     overflow: hidden;
@@ -351,14 +362,20 @@ header {
     .carousel__item img {
       position: absolute;
       opacity: 0;
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 7px 22px 0 rgba(0, 0, 0, 0.12);
-      border-radius: 8px; }
+      box-shadow: 0 4px 0px 24px rgba(0, 0, 0, 0.02);
+      border-radius: 4px; }
+      @media screen and (min-width: 1000px) {
+        .carousel__item img {
+          border-radius: 8px; } }
   .carousel__controller:checked + .carousel__item img {
     position: static;
     opacity: 1; }
   .carousel__indicators {
     display: flex;
-    padding-top: 4px; }
+    padding: 12px 0; }
+    @media screen and (min-width: 1000px) {
+      .carousel__indicators {
+        padding: 4px 0 0; } }
     .carousel__indicators li {
       display: inline-block; }
   .carousel__bullet {
@@ -384,12 +401,23 @@ header {
       opacity: 0.7; }
   .carousel__info {
     display: flex;
-    justify-content: space-between;
-    padding-top: 20px; }
+    align-items: center;
+    flex-direction: column-reverse; }
+    @media screen and (min-width: 1000px) {
+      .carousel__info {
+        padding-top: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start; } }
+    .carousel__info p,
+    .carousel__info label {
+      margin: 0; }
   .carousel__text {
-    max-width: 520px;
     font-family: "PT Sans", sans-serif;
     flex: 1; }
+    @media screen and (min-width: 1000px) {
+      .carousel__text {
+        max-width: 520px; } }
 
 input[data-name=carousel-1]:checked ~ .carousel__info li:nth-child(1) .carousel__bullet:before {
   background-color: transparent; }
@@ -413,10 +441,13 @@ input[data-name=carousel-4]:checked ~ .carousel__info li:nth-child(4) .carousel_
   .accordion p {
     position: relative;
     overflow: hidden;
-    max-width: 520px;
+    max-width: 385px;
     max-height: 800px;
     transform: translate(0, 0);
     z-index: 2; }
+    @media screen and (min-width: 1000px) {
+      .accordion p {
+        max-width: 520px; } }
   .accordion li {
     position: relative;
     overflow: hidden;
@@ -463,21 +494,18 @@ input[data-name=carousel-4]:checked ~ .carousel__info li:nth-child(4) .carousel_
         color: #000000; }
       .accordion li input[type=checkbox]:hover ~ i:before, .accordion li input[type=checkbox]:hover ~ i:after {
         background-color: #000000; }
+    .accordion li:last-child {
+      border-bottom: 1px solid transparent; }
 
 /* Sections */
 .section {
-  padding-top: 100px;
-  padding-bottom: 100px; }
-  @media screen and (min-width: 320px) {
-    .section {
-      padding-left: 20px;
-      padding-right: 20px; } }
+  padding: 0 10px; }
   @media screen and (min-width: 600px) {
     .section {
-      padding-left: 40px;
-      padding-right: 40px; } }
+      padding: 52px 40px; } }
   @media screen and (min-width: 1000px) {
     .section {
+      padding: 100px 10px;
       padding-left: 20px;
       padding-right: 20px; } }
 
@@ -488,13 +516,48 @@ input[data-name=carousel-4]:checked ~ .carousel__info li:nth-child(4) .carousel_
   flex-direction: column;
   justify-content: center;
   text-align: center; }
-  .header__image img {
-    width: 340px;
-    height: 340px;
-    object-fit: cover;
-    border-radius: 50%; }
+  .header__image {
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100vw - 40px);
+    height: calc(100vw - 40px); }
+    @media screen and (min-width: 320px) {
+      .header__image {
+        width: 205px;
+        height: 205px; } }
+    @media screen and (min-width: 600px) {
+      .header__image {
+        width: 250px;
+        height: 250px; } }
+    @media screen and (min-width: 1000px) {
+      .header__image {
+        width: 340px;
+        height: 340px; } }
   .header__text {
     padding-top: 36px; }
+    @media screen and (min-width: 600px) {
+      .header__text {
+        padding-top: 32px;
+        max-width: 280px;
+        margin: 0 auto; } }
+    @media screen and (min-width: 1000px) {
+      .header__text {
+        padding-top: 36px;
+        max-width: 100%; } }
+    @media screen and (min-width: 1000px) {
+      .header__text h1 {
+        max-width: 606px;
+        margin-left: auto;
+        margin-right: auto; } }
+    @media screen and (min-width: 1000px) {
+      .header__text p {
+        max-width: 504px;
+        margin-left: auto;
+        margin-right: auto; } }
 
 /* Work */
 .work {
@@ -503,6 +566,8 @@ input[data-name=carousel-4]:checked ~ .carousel__info li:nth-child(4) .carousel_
     text-align: center;
     max-width: 520px;
     margin: 0 auto; }
+    .work__header p {
+      margin: 0; }
 
 /* Contact */
 .contact {

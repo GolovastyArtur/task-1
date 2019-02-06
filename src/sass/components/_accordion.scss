@@ -24,10 +24,14 @@ $accordion-i-width: 16px;
   p{
     position: relative;
     overflow: hidden;
-    max-width: 520px;
+    max-width: 385px;
     max-height: 800px;
     transform: translate(0, 0);
     z-index: 2;
+
+    @include desktop{
+      max-width: 520px;
+    }
   }
 
   li{
@@ -114,6 +118,11 @@ $accordion-i-width: 16px;
           }
         }
       }
+    }
+
+    &:last-child{
+      // на макете аккардеон имеет прозрачный замыкающий бордер
+      border-bottom: 1px solid transparent;
     }
   }
 }
