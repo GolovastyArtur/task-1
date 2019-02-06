@@ -1,9 +1,36 @@
 @mixin transition{
-  transition: all .5s ease-in-out;
+  transition: all $transition ease-in-out;
 }
 
 %transition{
   @include transition;
+}
+
+@mixin desktop{
+  @media screen and (min-width: weight('desktop')){
+    @content
+  }
+}
+
+@mixin tablet{
+  @media screen and (min-width: weight('tablet')){
+    @content
+  }
+}
+
+@mixin mobile{
+  @media screen and (min-width: weight('mobile')){
+    @content
+  }
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
 }
 
 @mixin control($color: $link, $hover-color: $link-hover){
@@ -40,15 +67,15 @@
   outline: none;
   background: $white;
   border: 1px solid rgba($border, .2);
-  border-radius: 4px;
+  border-radius: $border-radius;
   padding: $main-padding;
-  margin-bottom: $gap;
+  margin-bottom: 1rem;
   max-width: 100%;
   width: 100%;
   @extend %transition;
   &::placeholder{
     color: $black;
-    opacity: .3;
+    opacity: $placeholder-opacity;
   }
   &:focus,
   &:active{
@@ -61,6 +88,9 @@
 
 %input{
   @include input;
+  @include desktop{
+    margin-bottom: $gap;
+  }
 }
 
 @mixin button($name, $color-button) {
@@ -86,24 +116,6 @@
   }
 }
 
-@mixin desktop{
-  @media screen and (min-width: weight('desktop')){
-    @content
-  }
-}
-
-@mixin tablet{
-  @media screen and (min-width: weight('tablet')){
-    @content
-  }
-}
-
-@mixin mobile{
-  @media screen and (min-width: weight('mobile')){
-    @content
-  }
-}
-
 
 @mixin social($name, $background, $font-size) {
   .social-#{$name} {
@@ -111,8 +123,7 @@
     font-size: $font-size;
     background-color: $background;
     align-items: center;
-    width: 48px;
-    height: 48px;
+    @include square($icons-width);
     border-radius: 50%;
     color: $white;
 
@@ -132,13 +143,4 @@
   input[data-name=carousel-#{$id}]:checked ~ .carousel__info li:nth-child(#{$id}) .carousel__bullet:before{
     background-color: transparent;
   }
-}
-
-@mixin size($width, $height) {
-  width: $width;
-  height: $height;
-}
-
-@mixin image($size) {
-  @include size($size, $size);
 }

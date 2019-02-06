@@ -20,38 +20,26 @@ $image-size: (
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc(100vw - 40px);
-    height: calc(100vw - 40px);
+    width: calc(100vw - #{$gap*2});
+    height: calc(100vw - #{$gap*2});
 
     @include mobile{
-      @include image(image-width('mobile'));
+      @include square(image-width('mobile'));
     }
 
     @include tablet{
-      @include image(image-width('tablet'));
+      @include square(image-width('tablet'));
     }
 
     @include desktop{
-      @include image(image-width('desktop'));
-    }
-
-    img{
-      //width: 340px;
-      //height: 340px;
-      //object-fit: cover;
-      //border-radius: 50%;
+      @include square(image-width('desktop'));
     }
   }
 
   &__text{
-    padding-top: 36px;
-
-
-    @include tablet{
-      padding-top: 32px;
-      max-width: $min-width;
-      margin: 0 auto;
-    }
+    padding-top: 2rem;
+    max-width: $min-width;
+    margin: 0 auto;
 
     @include desktop{
       padding-top: 36px;

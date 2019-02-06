@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:800|PT+Mono|PT+Sans&subset=cyrillic");
-.btn, .social-facebook, .social-twitter, .social-telegram, .social-linkedin, .input, .textaria, a, .carousel__item, .carousel__bullet:before, .accordion header,
+.btn, .social-facebook, .social-twitter, .social-telegram, .social-linkedin, .input, .textaria, a, .carousel__item img, .carousel__bullet:before, .accordion header,
 .accordion p,
 .accordion i, .accordion li i:before, .accordion li i:after {
-  transition: all .5s ease-in-out; }
+  transition: all 0.5s ease-in-out; }
 
 .btn, .social-facebook, .social-twitter, .social-telegram, .social-linkedin {
   color: #0059D9;
@@ -26,14 +26,17 @@
   border: 1px solid rgba(31, 64, 111, 0.2);
   border-radius: 4px;
   padding: 0.4375rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   max-width: 100%;
   width: 100%; }
   .input::placeholder, .textaria::placeholder {
     color: #000000;
-    opacity: .3; }
+    opacity: 0.3; }
   .input:focus, .textaria:focus, .input:active, .textaria:active {
     border-color: #0059D9; }
+  @media screen and (min-width: 1000px) {
+    .input, .textaria {
+      margin-bottom: 20px; } }
 
 /*! minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css */
 html,
@@ -171,8 +174,8 @@ img {
   max-width: 100%;
   vertical-align: top; }
 
-p,
-label {
+label,
+p {
   margin-bottom: 20px; }
 
 input[type=file] {
@@ -255,11 +258,15 @@ header {
   @media screen and (min-width: 1000px) {
     .field-6 {
       flex: 1 50%; } }
+  .field label {
+    margin-bottom: 1rem; }
+    @media screen and (min-width: 1000px) {
+      .field label {
+        margin-bottom: 20px; } }
 
 .textaria {
   resize: none;
-  vertical-align: top;
-  min-height: 136px; }
+  vertical-align: top; }
 
 /* Container */
 .container {
@@ -351,22 +358,27 @@ header {
   .carousel__header {
     text-align: center; }
     .carousel__header p {
-      margin-bottom: 16px; }
+      margin-bottom: 1rem; }
       @media screen and (min-width: 1000px) {
         .carousel__header p {
           margin-bottom: 20px; } }
   .carousel__item {
     position: relative;
     overflow: hidden;
-    width: 100%; }
+    width: 100%;
+    border-radius: 4px;
+    max-height: calc( (100vw - 40px) / 1.86666666); }
+    @media screen and (min-width: 600px) {
+      .carousel__item {
+        max-height: calc( (100vw - 80px) / 1.85714286); } }
+    @media screen and (min-width: 1000px) {
+      .carousel__item {
+        max-height: calc(700px / 1.85676393);
+        border-radius: 8px; } }
     .carousel__item img {
       position: absolute;
       opacity: 0;
-      box-shadow: 0 4px 0px 24px rgba(0, 0, 0, 0.02);
-      border-radius: 4px; }
-      @media screen and (min-width: 1000px) {
-        .carousel__item img {
-          border-radius: 8px; } }
+      box-shadow: 0 4px 0px 24px rgba(0, 0, 0, 0.02); }
   .carousel__controller:checked + .carousel__item img {
     position: static;
     opacity: 1; }
@@ -409,8 +421,8 @@ header {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start; } }
-    .carousel__info p,
-    .carousel__info label {
+    .carousel__info label,
+    .carousel__info p {
       margin: 0; }
   .carousel__text {
     font-family: "PT Sans", sans-serif;
@@ -441,13 +453,16 @@ input[data-name=carousel-4]:checked ~ .carousel__info li:nth-child(4) .carousel_
   .accordion p {
     position: relative;
     overflow: hidden;
-    max-width: 385px;
+    max-width: 100%;
     max-height: 800px;
     transform: translate(0, 0);
     z-index: 2; }
+    @media screen and (min-width: 600px) {
+      .accordion p {
+        max-width: 74.04%; } }
     @media screen and (min-width: 1000px) {
       .accordion p {
-        max-width: 520px; } }
+        max-width: 74.286%; } }
   .accordion li {
     position: relative;
     overflow: hidden;
@@ -499,15 +514,18 @@ input[data-name=carousel-4]:checked ~ .carousel__info li:nth-child(4) .carousel_
 
 /* Sections */
 .section {
-  padding: 0 10px; }
-  @media screen and (min-width: 600px) {
+  padding: 52px 10px; }
+  @media screen and (min-width: 320px) {
     .section {
-      padding: 52px 40px; } }
-  @media screen and (min-width: 1000px) {
-    .section {
-      padding: 100px 10px;
       padding-left: 20px;
       padding-right: 20px; } }
+  @media screen and (min-width: 600px) {
+    .section {
+      padding-left: 40px;
+      padding-right: 40px; } }
+  @media screen and (min-width: 1000px) {
+    .section {
+      padding: 100px 20px; } }
 
 /* Header */
 .header {
@@ -538,12 +556,9 @@ input[data-name=carousel-4]:checked ~ .carousel__info li:nth-child(4) .carousel_
         width: 340px;
         height: 340px; } }
   .header__text {
-    padding-top: 36px; }
-    @media screen and (min-width: 600px) {
-      .header__text {
-        padding-top: 32px;
-        max-width: 280px;
-        margin: 0 auto; } }
+    padding-top: 2rem;
+    max-width: 280px;
+    margin: 0 auto; }
     @media screen and (min-width: 1000px) {
       .header__text {
         padding-top: 36px;

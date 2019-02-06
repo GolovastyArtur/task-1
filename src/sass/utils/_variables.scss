@@ -38,6 +38,8 @@ $body-size: .875rem;
 $main-padding: $body-size / 2;
 $gap: 20px;
 $min-width: 280px;
+$text-width: 520px;
+$icons-width: 48px;
 $button-width: $min-width;
 $accordion-width: $min-width;
 $content-size: 700px;
@@ -48,3 +50,6 @@ $media-size: (
 );
 
 $opacity: .7;
+$placeholder-opacity: .3;
+$transition: .5s;
+$border-radius: 4px;

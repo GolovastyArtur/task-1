@@ -22,9 +22,15 @@
   padding: 0 $gap/2;
 
   &-6{
-
     @include desktop{
       flex: 1 50%;
+    }
+  }
+
+  label{
+    margin-bottom: 1rem;
+    @include desktop{
+      margin-bottom: $gap;
     }
   }
 }
@@ -37,6 +43,5 @@
   @extend %input;
   resize: none;
   vertical-align: top;
-  min-height: 136px;
 }
 

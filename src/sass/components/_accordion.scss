@@ -24,13 +24,17 @@ $accordion-i-width: 16px;
   p{
     position: relative;
     overflow: hidden;
-    max-width: 385px;
+    max-width: 100%;
     max-height: 800px;
     transform: translate(0, 0);
     z-index: 2;
 
+    @include tablet{
+      max-width: 74.04%;
+    }
+
     @include desktop{
-      max-width: 520px;
+      max-width: 74.286%;
     }
   }
 

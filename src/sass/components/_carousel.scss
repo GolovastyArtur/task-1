@@ -3,10 +3,12 @@ $accordion-i-width: 16px;
 $items: 4;
 
 .carousel{
+  // можно также реализовать через 3*$gap
   padding-top: 60px;
   position: relative;
 
   @include desktop{
+    // 4*$gap
     padding-top: 80px;
   }
 
@@ -14,10 +16,10 @@ $items: 4;
     text-align: center;
 
     p{
-      margin-bottom: 16px;
+      margin-bottom: 1rem;
 
       @include desktop{
-        margin-bottom: 20px;
+        margin-bottom: $gap;
       }
     }
   }
@@ -26,17 +28,23 @@ $items: 4;
     position: relative;
     overflow: hidden;
     width: 100%;
+    border-radius: $border-radius;
+    max-height: calc( (100vw - #{$gap*2}) / 1.86666666);
 
-    @extend %transition;
+    @include tablet{
+      max-height: calc( (100vw - #{$gap*4}) / 1.85714286);
+    }
+
+    @include desktop{
+      max-height: calc(#{$content-size} / 1.85676393);
+      border-radius: 2*$border-radius;
+    }
+
     img{
       position: absolute;
+      @extend %transition;
       opacity: 0;
       box-shadow: 0 4px 0px 24px rgba($black, .02);
-      border-radius: 4px;
-
-      @include desktop{
-        border-radius: 8px;
-      }
     }
   }
 
@@ -47,12 +55,12 @@ $items: 4;
 
   &__indicators {
     display: flex;
-    // отстутп от изоброжения на макете 28px.
-    // высота bullet = 8px. Значит отступ от li 4px и того 24px растояния от изображения
-    // это 4 пикселя нехватаюшего смещения
     padding: 12px 0;
 
     @include desktop{
+      // отстутп от изоброжения на макете 28px.
+      // высота bullet = 8px. Значит отступ от li 4px и того 24px растояния от изображения
+      // это 4 пикселя нехватаюшего смещения
       padding: 4px 0 0;
     }
 
@@ -109,8 +117,8 @@ $items: 4;
       align-items: flex-start;
     }
 
-    p,
-    label{
+    label,
+    p{
       margin: 0;
     }
   }
@@ -120,7 +128,7 @@ $items: 4;
     flex: 1;
 
     @include desktop{
-      max-width: 520px;
+      max-width: $text-width;
     }
   }
 }
