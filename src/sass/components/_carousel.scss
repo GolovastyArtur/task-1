@@ -30,6 +30,7 @@ $items: 4;
     width: 100%;
     border-radius: $border-radius;
     max-height: calc( (100vw - #{$gap*2}) / 1.86666666);
+    box-shadow: 0 1px 2px 0 rgba($black, .08), 0 4px 12px 0 rgba($black, .12);
 
     @include tablet{
       max-height: calc( (100vw - #{$gap*4}) / 1.85714286);
@@ -44,7 +45,6 @@ $items: 4;
       position: absolute;
       @extend %transition;
       opacity: 0;
-      box-shadow: 0 4px 0px 24px rgba($black, .02);
     }
   }
 
